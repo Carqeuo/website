@@ -4,7 +4,7 @@ metadata:
   name: website
   namespace: website
 spec:
-  replicas: 3 # Er zijn twee pods actief. Tijdens een deployment wordt steeds één pod vervangen.
+  replicas: 3 # Er zijn drie pods actief. Tijdens een deployment wordt steeds één pod vervangen.
   strategy:
     type: RollingUpdate
     rollingUpdate:
@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: nginx
-          image: ghcr.io/carqeuo/k3s-gitops:latest
+          image: ghcr.io/carqeuo/website:latest
           ports:
             - containerPort: 80
           readinessProbe: # Nieuwe pod wordt pas gebruikt zodra nginx klaar is om verzoeken te verwerken.
