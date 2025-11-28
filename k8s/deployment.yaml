@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: nginx
-          image: ghcr.io/carqeuo/website:latest
+          image: ghcr.io/carqeuo/website:85e1bcc9bf9fdfabd0507fe339367db82f6a58db
           ports:
             - containerPort: 80
           readinessProbe: # Nieuwe pod wordt pas gebruikt zodra nginx klaar is om verzoeken te verwerken.
