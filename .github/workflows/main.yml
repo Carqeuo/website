@@ -1,0 +1,31 @@
+name: Build and Push Website Image
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - "src/**"
+      - "Dockerfile"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Log in to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build docker image
+        run: |
+          docker build --no-cache -t ghcr.io/carqeuo/website:latest .
+
+      - name: Push docker image
+        run: |
+          docker push ghcr.io/carqeuo/website:latest

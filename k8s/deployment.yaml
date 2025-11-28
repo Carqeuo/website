@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: website
+  namespace: website
+spec:
+  replicas: 3 # Er zijn twee pods actief. Tijdens een deployment wordt steeds één pod vervangen.
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1 # Kubernetes mag een extra pod tijdelijk starten om de nieuwe versie eerst live te krijgen vóórdat de oude wordt gestopt.
+      maxUnavailable: 0 # Er mag op geen enkel moment minder dan 2 actieve pods zijn.
+  selector:
+    matchLabels:
+      app: website
+  template:
+    metadata:
+      labels:
+        app: website
+    spec:
+      containers:
+        - name: nginx
+          image: ghcr.io/carqeuo/k3s-gitops:latest
+          ports:
+            - containerPort: 80
+          readinessProbe: # Nieuwe pod wordt pas gebruikt zodra nginx klaar is om verzoeken te verwerken.
+            httpGet:
+              path: /
+              port: 80
+            initialDelaySeconds: 2
+            periodSeconds: 3

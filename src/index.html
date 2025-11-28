@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Denpai-kei MAX — Informatiepagina</title>
+  <meta name="description" content="{{KORTE_BESCHRIJVING_VAN_HET_FESTIVAL}}" />
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- HEADER / HERO -->
+  <header class="hero">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <h1>Denpai-kei MAX</h1>
+        <p class="lead">15 Januari 2026 — Etten-Leur</p>
+        <p class="tagline">Ooit gehoord van Denpai, nee? mischien ook beter zo</p>
+        <div class="cta-row">
+          <a class="btn" href="{{TICKET_LINK}}" target="_blank" rel="noopener">Tickets</a>
+          <a class="btn ghost" href="#lineup">Line-up</a>
+        </div>
+      </div>
+      <div class="hero-image" aria-hidden="true">
+        <img src="images/nanahira.gif" alt="Festival hero afbeelding (placeholder)">
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- PRACTICAL INFO -->
+    <section id="info" class="card">
+      <h2>Praktische info</h2>
+      <div class="grid-2">
+        <div>
+          <h3>Tijden</h3>
+          <ul class="info-list">
+            <!-- Vervang items door echte tijden -->
+            <li><strong>Gates open:</strong> 13:30</li>
+            <li><strong>Start main stage:</strong> 14:00</li>
+            <li><strong>Einde:</strong> 18:00</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Locatie</h3>
+          <p>{{LOCATIE_NAAM}}</p>
+          <p>{{LOCATIE_ADRES}}</p>
+          <p><a href="{{GOOGLE_MAPS_LINK}}" target="_blank" rel="noopener">Bekijk op kaart</a></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- LINE-UP / ARTISTS -->
+    <section id="lineup" class="card">
+      <h2>Line-up</h2>
+      <p class="muted">Klik op een artiest voor meer info of luister alvast via Spotify.</p>
+
+      <div class="artist-grid">
+        <!-- COPY/PASTE deze blokken en vul per artiest in -->
+        <article class="artist">
+          <img src="images/pfpnanahira.jpg" alt="Artiest 1 foto">
+          <div class="artist-body">
+            <h3>Nanahira</h3>
+            <p class="time">14:00</p>
+            <p class="bio">{{ARTIST1_BIO_PLAATS_HIER}}</p>
+            <div class="artist-links">
+              <a class="small-btn" href="https://open.spotify.com/artist/0bkkiFN0ghGl4j9aLi3oQx?si=Aw2LIBWBTxul_M1SoM83yQ" target="_blank" rel="noopener">Spotify</a>
+              <a class="small-btn ghost" href="https://utaite.fandom.com/wiki/Nanahira" target="_blank" rel="noopener">Website</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="artist">
+          <img src="images/nekohacker.jpg" alt="Artiest 2 foto">
+          <div class="artist-body">
+            <h3>Neko Hacker</h3>
+            <p class="time">16:00</p>
+            <p class="bio">{{ARTIST2_BIO_PLAATS_HIER}}</p>
+            <div class="artist-links">
+              <a class="small-btn" href="https://open.spotify.com/artist/2aQ9IoRPwXEhhBVj4wbS46?si=b0ba2a153b064f1c" target="_blank" rel="noopener">Spotify</a>
+              <a class="small-btn ghost" href="https://nekohacker.com/" target="_blank" rel="noopener">Website</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Voeg meer artiesten toe naar behoefte -->
+      </div>
+    </section>
+
+    <!-- SCHEDULE / TIJDSCHEMA (tabel) -->
+    <section id="schedule" class="card">
+      <h2>Schema</h2>
+      <table class="schedule">
+        <thead>
+          <tr>
+            <th>Tijd</th>
+            <th>Podium</th>
+            <th>Artiest</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{{SLOT1_TIME}}</td>
+            <td>{{SLOT1_STAGE}}</td>
+            <td>{{SLOT1_ARTIST}}</td>
+          </tr>
+          <tr>
+            <td>{{SLOT2_TIME}}</td>
+            <td>{{SLOT2_STAGE}}</td>
+            <td>{{SLOT2_ARTIST}}</td>
+          </tr>
+          <!-- Meer rijen -->
+        </tbody>
+      </table>
+    </section>
+
+    <!-- SPOTIFY SNIPPETS (voorbeeld embed / links) -->
+    <section id="preview" class="card">
+      <h2>Luister alvast</h2>
+      <p class="muted">Hier zijn wat sneak peaks van de beste nummers.</p>
+
+      <div class="spotify-row">
+        <!-- Normale link -->
+        <div class="spotify-card">
+          <h4>Nanahira</h4>
+          <!-- voorbeeld embed, vervang TRACK_ID -->
+		  <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/19u2f8uldBM0TVyrUM6y32?si=669993eedb5e4ea7?utm_source=generator" width="300" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+
+        <!-- Embed (optioneel; werkt als Spotify embed toegestaan) -->
+        <div class="spotify-card">
+          <h4>Neko Hacker</h4>
+          <!-- voorbeeld embed, vervang TRACK_ID -->
+		  <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/7bl3zzrbaVtFneoB1Xal8K?si=0905872ff2154684?utm_source=generator" width="300" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+
+		<!-- Embed (optioneel; werkt als Spotify embed toegestaan) -->
+        <div class="spotify-card">
+          <h4>Special Guest</h4>
+          <!-- voorbeeld embed, vervang TRACK_ID -->
+		  <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/7sh0ZVMLYh44tuFWHxLIA9?si=079a9faf395b46c9?utm_source=generator" width="300" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXTRA: veelgestelde vragen / contact -->
+    <section id="contact" class="card">
+      <h2>Algemene voorwaarden & Contact</h2>
+      <h3>Algemene voorwaarden:</h3>
+      	<ul>
+		<li><strong>kunt u de artiest niet verstaan?</strong> niet onze schuld.</li>
+		<li><strong>komt de artiest niet opdagen?</strong> niet onze schuld.</li>
+		<li><strong>zijn alle nummers in het Japans?</strong>...ja dat hoord.</li>
+		<br>
+		<strong>de rest is ook niet onze schuld.</strong> <br> <br>
+		<strong>wij accepteren alleen pokemon kaarten en fontys waardenbonnen.</strong>
+		</ul>
+
+      <h3>Contact</h3>
+      <p>Email: <a href="mailto:jonesyfortnite75@gmail.com">Neem contact op </a></p>
+      <p>Telefoon: 68 65 6C 6C 6F 20 77 6F 72 6C 64</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; {{JAAR}} {{FESTIVAL_NAME}} — Alle rechten voorbehouden.</p>
+      <p class="muted">Pagina template — vervang alle {{PLACEHOLDERS}} met je eigen data.</p>
+    </div>
+  </footer>
+
+  <!-- OPTIONAL: kleine script voor anchors / progressive enhancement -->
+  <script>
+    // Smooth scroll for internal links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        e.preventDefault();
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) target.scrollIntoView({behavior:'smooth'});
+      });
+    });
+  </script>
+</body>
+</html>
